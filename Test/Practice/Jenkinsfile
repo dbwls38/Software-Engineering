@@ -57,7 +57,7 @@ pipeline {
             steps {
                 sh '''
                     echo "[*] Running tests..."
-                    java -jar lib/junit-platform-console-standalone-1.9.3.jar \
+                    java -jar Test/lib/junit-platform-console-standalone-1.9.3.jar \
                         --class-path ${CLASS_DIR} \
                         --scan-class-path \
                         --reports-dir ${REPORT_DIR}
