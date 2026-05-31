@@ -33,7 +33,7 @@ pipeline {
                 sh '''
                     echo "[*] Compiling source files..."
                     find Test/src -name "*.java" > sources.txt
-                    javac -encoding UTF-8 -d ${CLASS_DIR} -cp ${JUNIT_JAR} @sources.txt
+                    javac -encoding UTF-8 -d ${CLASS_DIR} -cp lib/junit-platform-console-standalone-1.9.3.jar @sources.txt
                 '''
             }
         }
@@ -42,7 +42,7 @@ pipeline {
             steps {
                 sh '''
                     echo "[*] Running tests with JUnit..."
-                    java -jar ${JUNIT_JAR} \
+                    java -jar lib/junit-platform-console-standalone-1.9.3.jar \
                         --class-path ${CLASS_DIR} \
                         --reports-dir ${REPORT_DIR} \
                         --disable-banner \
