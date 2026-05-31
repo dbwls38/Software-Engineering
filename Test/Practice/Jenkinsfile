@@ -58,10 +58,15 @@ pipeline {
                 sh '''
                     echo "[*] Running tests..."
                     java -jar Test/lib/junit-platform-console-standalone-1.9.3.jar \
-                        --class-path ${CLASS_DIR} \
-                        --scan-class-path \
-                        --reports-dir ${REPORT_DIR}
-                '''
+	                --class-path ${CLASS_DIR} \
+	                --scan-class-path \
+	                --details=tree \
+	                --details-theme=ascii \
+	                --reports-dir ${REPORT_DIR} \
+	                --config=junit.platform.output.capture.stdout=true \
+	                --config=junit.platform.reporting.open.xml.enabled=true \
+	                > ${REPORT_DIR}/test-output.txt
+	        '''
             }
         }
     }
