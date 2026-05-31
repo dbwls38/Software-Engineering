@@ -33,8 +33,7 @@ pipeline {
                 sh '''
                     echo "[*] Compiling source files..."
                     find Test/src -name "*.java" > sources.txt
-                    javac -encoding UTF-8 -d ${CLASS_DIR} -cp "lib/junit-jupiter-api-5.11.4.jar;lib/junit-platform-console-standalone-1.9.3.jar" @sources.txt
-
+                    javac -encoding UTF-8 -d classes -cp "lib/*" @sources.txt
                 '''
             }
         }
