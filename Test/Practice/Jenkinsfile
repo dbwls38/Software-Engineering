@@ -78,11 +78,11 @@ pipeline {
         }
 
         success {
-            echo "✅ Build and test succeeded"
+            echo "Build and test succeeded"
         }
 
         failure {
-            echo "❌ Build and test failed"
+            echo "Build and test failed"
         }
     }
 }

@@ -6,17 +6,17 @@ import java.util.List;
 public class BookManagerClass {
     private List<String> books = new ArrayList<>();
 
-    // 책 추가
+    // ADD BOOK
     public void addBook(String title) {
         books.add(title);
     }
 
-    // 책 삭제
+    // DELETE BOOK
     public boolean removeBook(String title) {
         return books.remove(title);
     }
 
-    // 책 목록 조회
+    // SEARCH BOOK
     public List<String> getBooks() {
         return new ArrayList<>(books);
     }
