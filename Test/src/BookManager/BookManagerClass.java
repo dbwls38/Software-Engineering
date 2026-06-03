@@ -1,6 +1,7 @@
 //이클립스 워크 스페이스를 open 해야한다. 
 //내용을 변경하고 COMMIT 및 PUSH를 해야한다. 
-//주석내용변경 COMMIT
+//주석내용작성 COMMIT
+
 package BookManager;
 
 import java.util.ArrayList;
